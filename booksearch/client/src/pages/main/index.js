@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container';
+import Banner from '../../components/banner';
+
 
 class Main extends Component {
 
     render() {
         return (
-            <Container>
-                <h6>Test!</h6>
-            </Container>
-
+            <>
+                <Banner />
+            </>
         )
     }
 }
