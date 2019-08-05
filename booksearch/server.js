@@ -4,6 +4,8 @@ const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
+const http = require('http').createServer(app);
+var io = require('socket.io')(http);
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +25,10 @@ app.use(routes);
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+
+io.on('connection', function (socket) {
+  console.log('a user connected');
+})
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

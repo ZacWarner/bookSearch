@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="bg-dark">
           <Nav />
           <Route exact path="/" component={Main} />
           <Route exact path="/saved" component={Saved} />

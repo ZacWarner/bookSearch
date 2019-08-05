@@ -13,3 +13,5 @@ the search page lets you use googles book api to search for books, you can then 
 * Javascript
 * Css
 
+#### Credits
+Photo by Stanislav Kondratiev on Unsplash
